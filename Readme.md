@@ -20,5 +20,5 @@ This is a user login and registration app using
 #### MongoDB
 Open "config/keys.js" and add your MongoDB URI, local or Atlas
 
-<img src="https://monosnap.com/image/rSNBzCyWhIyYf33CJK5LZuDVswHUZs"/>
+<img src="https://monosnap.com/image/U1Fg7V3fhed39ixu2qMwowc1Nfhw0G"/>
 
