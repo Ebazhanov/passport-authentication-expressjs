@@ -1,9 +1,8 @@
 {
   "name": "passport-authentication",
   "scripts": {
-    "build": "netlify-lambda build express",
-    "start": "node express/app.js",
-    "dev": "nodemon express/app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -13,12 +12,10 @@
     "express-ejs-layouts": "^2.5.0",
     "express-session": "^1.15.6",
     "mongoose": "^5.7.5",
-    "netlify-lambda": "^1.6.3",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
-    "serverless-http": "^2.3.0"
+    "nodemon": "^1.18.9"
   }
 }
