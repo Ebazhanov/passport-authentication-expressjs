@@ -1,7 +1,8 @@
 Passport authentication
 ----------------------------
 
-On this example I was learning [express js](https://www.youtube.com/watch?v=6FOq4cUdH8k) with login & registration logic 
+On this example I was learning [express js](https://www.youtube.com/watch?v=6FOq4cUdH8k) 
+> with ***Login & Registration*** app
 
 #### Usage
 - `$ npm install`
