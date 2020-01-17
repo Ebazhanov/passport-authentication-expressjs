@@ -4,14 +4,15 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
-
+const serverless = require('serverless-http');
+const router = express.Router();
 const app = express();
 
 // Passport Config
-require('./config/passport')(passport);
+require('../config/passport')(passport);
 
 // DB Config
-const db = require('./config/keys').mongoURI;
+const db = require('../config/keys').mongoURI;
 
 // Connect to MongoDB
 mongoose
@@ -57,9 +58,15 @@ app.use(function (req, res, next) {
 });
 
 // Routes
-app.use('/', require('./routes/index.js'));
-app.use('/users', require('./routes/users.js'));
+app.use('/', require('../routes'));
+app.use('/users', require('../routes/users.js'));
+app.use('/.netlify/functions/server', router);
 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
+
+app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../express/app.js')));
+
+module.exports = app;
+module.exports.handler = serverless(app);
