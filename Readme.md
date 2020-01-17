@@ -1,5 +1,7 @@
-Passport authentication form [based on Tutorial](https://www.youtube.com/watch?v=6FOq4cUdH8k)
+Passport authentication
 ----------------------------
+
+On this example I was learning [express js](https://www.youtube.com/watch?v=6FOq4cUdH8k) with login & registration logic 
 
 #### Usage
 - `$ npm install`
@@ -21,4 +23,3 @@ This is a user login and registration app using
 Open "config/keys.js" and add your MongoDB URI, local or Atlas
 
 ![PassportApp Demo](PassportApp.gif)
-
